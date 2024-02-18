@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+      <link href="/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+      <link href="/plugins/custom/vis-timeline/vis-timeline.bundle.css" rel="stylesheet" type="text/css" />
+      <link href="/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+      <link href="/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <title>AFP</title>
+  </head>
+  <body id="kt_app_body" data-kt-app-layout="light-sidebar" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" class="app-default">
+        <script>
+            var defaultThemeMode = "light";
+            var themeMode;
+            if ( document.documentElement ) {
+                if ( document.documentElement.hasAttribute("data-bs-theme-mode"))
+                {
+                    themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
+                } else {
+                    if ( localStorage.getItem("data-bs-theme") !== null ) {
+                        themeMode = localStorage.getItem("data-bs-theme");
+                    } else {
+                        themeMode = defaultThemeMode;
+                    }
+                }
+                if (themeMode === "system") {
+                    themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                }
+                document.documentElement.setAttribute("data-bs-theme", themeMode);
+            }
+        </script>
+
+        <div id="app"></div>
+        <script type="module" src="/src/main.js"></script>
+      <script>var hostUrl = "/";</script>
+      <script src="/plugins/global/plugins.bundle.js"></script>
+      <script src="/js/scripts.bundle.js"></script>
+      <script src="/plugins/custom/datatables/datatables.bundle.js"></script>
+      <script src="/plugins/custom/vis-timeline/vis-timeline.bundle.js"></script>
+      <script src="/js/widgets.bundle.js"></script>
+      <script src="/js/custom/widgets.js"></script>
+      <script src="/js/custom/apps/chat/chat.js"></script>
+      <script src="/js/custom/utilities/modals/upgrade-plan.js"></script>
+      <script src="/js/custom/utilities/modals/create-project/type.js"></script>
+      <script src="/js/custom/utilities/modals/create-project/budget.js"></script>
+      <script src="/js/custom/utilities/modals/create-project/settings.js"></script>
+      <script src="/js/custom/utilities/modals/create-project/team.js"></script>
+      <script src="/js/custom/utilities/modals/create-project/targets.js"></script>
+      <script src="/js/custom/utilities/modals/create-project/files.js"></script>
+      <script src="/js/custom/utilities/modals/create-project/complete.js"></script>
+      <script src="/js/custom/utilities/modals/create-project/main.js"></script>
+      <script src="/js/custom/utilities/modals/create-campaign.js"></script>
+      <script src="/js/custom/utilities/modals/users-search.js"></script>
+
+  </body>
+</html>
